@@ -26,7 +26,7 @@ The fix? *Rewrite all the code that was still in use, and freeze the code that w
 
 So that's the story, now let's turn a bit more precise and list my insights about wrapper libraries:
 
- 1. **Wrapper libraries and classes are used to wrap the *knowledge* of the developer *rather than the API itself*.** Generally, this happens at the time that the developer is still *learning about the subject*. I'll let you mull over of the implications of this statement privately; take your time.
+ 1. **Wrapper libraries and classes are used to wrap the *knowledge* of the developer *rather than the API itself*.** Generally, the design of the API of the wrapper takes place when the developer is still *learning about the subject*. I'll let you mull over of the implications of this statement; take your time.
 
  2. Although the idea is to simplify the code, generally it happens to *over*-simplify the code, which will come back to bite you if you ever need to refactor. For instance, my `DES` class didn't stream, so you'd need `Cipher` again to do anything of that kind. Either that or expand the wrapper - until you've covered all the functionality of the original API.
 
